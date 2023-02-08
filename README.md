@@ -1,11 +1,11 @@
 # wrapper_for_wxsqlite3
 A lib for wxsqlite3, simply Refactored the sqlite3 api method. Conbined it with stream operations.
 
-Ref: modern sql
+Ref: modern sql lib implementation
 
 ## Exception Handle
 
-数据库内部是强异常保证的，操作都需要进行try catch.
+数据库内部是强异常保证的，这取决于sqlite3
 
 ### sqlite_exception.hpp
 
@@ -23,7 +23,7 @@ sqlite exception在头文件中给出了定义，catch即可
     ` errors::throw_bad_sqlite(const char* msg, const std::string& sql = "", int code = -1)`
 
 
-## I wanna define a database
+## Database Defination
 
 ```c++
 // public 继承 database<`name_of_this_class`>
@@ -62,7 +62,7 @@ whitelist::init()
 }
 ```
 
-## 我想创建数据库
+## Database Initialization
 ```c++
 try
 {
@@ -190,7 +190,7 @@ There are few ways you could do this.
     }
 ```
 
-### Prepared Statment
+### prepared statment
 
 ```c++
 
