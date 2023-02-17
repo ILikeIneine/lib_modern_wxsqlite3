@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_library(modern_wxsqlite3 INTERFACE)
 
-target_include_directories(modern_wxsqlite3 INTERFACE ./headers)
+target_include_directories(modern_wxsqlite3 INTERFACE .)
