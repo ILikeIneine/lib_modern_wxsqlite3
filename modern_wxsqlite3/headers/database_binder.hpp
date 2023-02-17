@@ -164,7 +164,7 @@ private:
       errors::throw_sqlite_error(ret_code, sql());
   }
 
-  void extract_multi_values_(const std::function<void()>& callback)
+  void extract_multi_values_(const std::function<void(void)>& callback)
   {
     SQL_RESULT ret_code;
     start_execute_();
